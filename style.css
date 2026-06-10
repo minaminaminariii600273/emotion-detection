@@ -1,0 +1,119 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+    color: #e2e8f0;
+    padding: 20px;
+}
+
+.container {
+    width: min(820px, 100%);
+    background: rgba(15, 23, 42, 0.92);
+    border: 1px solid rgba(148, 163, 184, 0.2);
+    border-radius: 20px;
+    padding: 28px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.35);
+    backdrop-filter: blur(10px);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2rem;
+}
+
+.header p {
+    margin: 8px 0 18px;
+    color: #94a3b8;
+}
+
+textarea {
+    width: 100%;
+    min-height: 170px;
+    resize: vertical;
+    border-radius: 16px;
+    border: 1px solid #334155;
+    background: #0b1220;
+    color: #f8fafc;
+    padding: 16px;
+    font-size: 1rem;
+    outline: none;
+}
+
+textarea:focus {
+    border-color: #60a5fa;
+    box-shadow: 0 0 0 3px rgba(96, 165, 250, 0.18);
+}
+
+.button-grid {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 12px;
+    margin-top: 16px;
+}
+
+button {
+    border: none;
+    border-radius: 14px;
+    padding: 12px 14px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    background: linear-gradient(135deg, #2563eb, #7c3aed);
+    color: white;
+    transition: transform 0.15s ease, opacity 0.15s ease;
+}
+
+button:hover {
+    transform: translateY(-1px);
+    opacity: 0.95;
+}
+
+button.secondary {
+    background: #1e293b;
+    border: 1px solid #334155;
+}
+
+.result-card {
+    margin-top: 18px;
+    padding: 18px;
+    border-radius: 16px;
+    background: #0b1220;
+    border: 1px solid #334155;
+    font-size: 1.15rem;
+    line-height: 1.5;
+    min-height: 70px;
+}
+
+.examples {
+    margin-top: 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+
+.examples span {
+    color: #94a3b8;
+    margin-right: 4px;
+}
+
+.examples button {
+    padding: 10px 12px;
+    font-size: 0.9rem;
+    border-radius: 999px;
+    background: #111827;
+    border: 1px solid #334155;
+}
+
+@media (max-width: 700px) {
+    .button-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}

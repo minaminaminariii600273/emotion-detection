@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mood Detector</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Mood Detector</h1>
+            <p>Discord-style emotion and vibe detector</p>
+        </div>
+
+        <textarea id="userText" placeholder="Type something like: heeelllooo, wow!!!, idk..., owo, bye, haha"></textarea>
+
+        <div class="button-grid">
+            <button onclick="detectEmotion()">Detect Mood</button>
+            <button onclick="startListening()" class="secondary">🎤 Listen</button>
+            <button onclick="clearText()" class="secondary">Clear</button>
+            <button onclick="pasteSample()" class="secondary">Sample</button>
+            <button onclick="copyResult()" class="secondary">Copy Result</button>
+            <button onclick="speakResult()" class="secondary">Speak Result</button>
+            <button onclick="loadDiscordMode()" class="secondary">Discord Mode</button>
+            <button onclick="setText('heeelllooo!!!')" class="secondary">Hello Test</button>
+            <button onclick="setText('idk... maybe later')" class="secondary">Confused Test</button>
+        </div>
+
+        <div id="result" class="result-card">Detected Mood: —</div>
+
+        <div class="examples">
+            <span>Try:</span>
+            <button onclick="setText('heeelllooo!!!')">heeelllooo!!!</button>
+            <button onclick="setText('idk... maybe')">idk...</button>
+            <button onclick="setText('hahaha that was amazing')">hahaha</button>
+            <button onclick="setText('owo hi there')">owo hi</button>
+            <button onclick="setText('bye cya later')">bye</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
